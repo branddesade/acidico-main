@@ -7,17 +7,7 @@ import SectionTitle from "../Common/SectionTitle";
 import PricingBox from "./PricingBox";
 
 const Pricing = () => {
-  // const [products, setProducts] = useState([]);
-
-  // useEffect(() => {
-  //   fetchProducts();
-  // }, []);
-
-  // const fetchProducts = async () => {
-  //   const { data } = await axios.get("/api/getproducts");
-  //   setProducts(data);
-  // };
-
+  
   return (
     <section
       id="pricing"
@@ -36,8 +26,7 @@ const Pricing = () => {
                     className={`relative mb-4 sm:mb-8 sm:h-[400px] md:h-[540px] lg:h-[400px] xl:h-[500px] `}
                   >
                     <Image
-                      src="/images/about/tokenomics-01.jpg"
-                      
+                      src="/images/about/about-image-01.jpg"
                       alt="about image"
                       fill
                       className="h-full w-full object-fit object-center"
@@ -46,56 +35,7 @@ const Pricing = () => {
                 </div>
         </div>
 
-        {/* <div className="-mx-4 flex flex-wrap justify-center">
-          {products.map((product, i) => (
-            <PricingBox key={1} product={product} />
-          ))} */}
-          {/*           
-          <PricingBox
-            popular={false}
-            packageName="Lite"
-            price="19.99"
-            subtitle="STARTING FROM"
-            btn="Purchase Now"
-            purchaseLink="/#"
-          >
-            <OfferList text="1 User" />
-            <OfferList text="All UI components" />
-            <OfferList text="Lifetime access" />
-            <OfferList text="Free updates" />
-            <OfferList text="Use on 1 (one) project" />
-            <OfferList text="3 Months support" />
-          </PricingBox>
-          <PricingBox
-            popular={true}
-            packageName="Basic"
-            price="19.99"
-            subtitle="STARTING FROM"
-            btn="Purchase Now"
-            purchaseLink="/#"
-          >
-            <OfferList text="1 User" />
-            <OfferList text="All UI components" />
-            <OfferList text="Lifetime access" />
-            <OfferList text="Free updates" />
-            <OfferList text="Use on 1 (one) project" />
-            <OfferList text="3 Months support" />
-          </PricingBox>
-          <PricingBox
-            packageName="Plus"
-            price="70.99"
-            subtitle="STARTING FROM"
-            btn="Purchase Now"
-            purchaseLink="/#"
-          >
-            <OfferList text="1 User" />
-            <OfferList text="All UI components" />
-            <OfferList text="Lifetime access" />
-            <OfferList text="Free updates" />
-            <OfferList text="Use on 1 (one) project" />
-            <OfferList text="3 Months support" />
-          </PricingBox> */}
-        </div>
+        
       </div>
     </section>
   );
