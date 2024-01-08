@@ -7,7 +7,27 @@ const config: Config = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  theme: {},
+  theme: {
+    extend: {
+      colors: {
+        acid: {
+          50: '#19171b',
+          100: '#d39235',
+          
+        },
+        whito: {
+          50: '#beb3a9',
+        },
+        redo: {
+          50: '#821a1a',
+        },
+        blueo: {
+          50: '#3b3f50',
+        },
+      }
+    },
+    
+  },
   plugins: [require("tailgrids/plugin")],
 };
 export default config;

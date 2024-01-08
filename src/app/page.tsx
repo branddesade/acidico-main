@@ -14,8 +14,8 @@ import { getAllPosts } from "@/utils/markdown";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "ACID DAO",
-  description: "Free Next.js SaaS Boilerplate and Starter Kit designed and built for SaaS startups. It comes with all necessary integrations, pages, and components you need to launch a feature-rich SaaS websites.",
+  title: "ACID DAO - Keepings Tabs on Next Gen ICOs",
+  description: "Airdrop Incoming",
 };
 
 export default function Home() {
@@ -23,18 +23,17 @@ export default function Home() {
 
   return (
     <main>
-      <ScrollUp />
+      {/* <ScrollUp /> */}
       <Hero />
-      <Features />
-      <About />
+      {/* <Features /> */}
+      {/* <About /> */}
+      {/* <CallToAction /> */}
+      {/* <Pricing /> */}
+      {/* <Testimonials /> */}
+      {/* <Faq /> */}
+      {/* <Team /> */}
       {/* <HomeBlogSection posts={posts} /> */}
-     
-      <Pricing />
-      <CallToAction />
-      {/* <Testimonials />
-      <Faq />
-      <Team />
-      <Contact /> */}
+      {/* <Contact /> */}
       {/* <Clients /> */}
     </main>
   );

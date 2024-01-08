@@ -48,13 +48,13 @@ const Header = () => {
       <header
         className={`ud-header left-0 top-0 z-40 flex w-full items-center ${
           sticky
-            ? "shadow-nav fixed z-[9999] border-b border-stroke bg-white/80 backdrop-blur-[5px] transition dark:border-dark-3/20 dark:bg-dark/10"
+            ? "shadow-nav fixed z-[9999] border-b border-whito-50 bg-whito-50/95 backdrop-blur-[5px] transition dark:border-dark-3/20 dark:bg-dark/10"
             : "absolute bg-transparent"
         }`}
       >
         <div className="container">
           <div className="relative -mx-4 flex items-center justify-between">
-            <div className="w-20 max-w-full px-4">
+            <div className="w-60 max-w-full px-4 drop-shadow-xl">
               <Link
                 href="/"
                 className={`navbar-logo block w-full ${
@@ -64,14 +64,14 @@ const Header = () => {
                 {pathUrl !== "/" ? (
                   <>
                     <Image
-                      src={`/images/logo/logo.png`}
+                      src={`/images/logo/logo.svg`}
                       alt="logo"
                       width={140}
                       height={30}
                       className="header-logo w-full dark:hidden"
                     />
                     <Image
-                      src={`/images/logo/logo.png`}
+                      src={`/images/logo/logo-white.svg`}
                       alt="logo"
                       width={140}
                       height={30}
@@ -83,20 +83,20 @@ const Header = () => {
                     <Image
                       src={`${
                         sticky
-                          ? "/images/logo/logo.png"
-                          : "/images/logo/logo.png"
+                          ? "/images/logo/logo.svg"
+                          : "/images/logo/logo-white.svg"
                       }`}
                       alt="logo"
                       width={140}
                       height={30}
-                      className="header-logo w-full dark:hidden"
+                      className="header-logo w-1/2 dark:hidden"
                     />
                     <Image
-                      src={"/images/logo/logo.png"}
+                      src={"/images/logo/logo-white.svg"}
                       alt="logo"
                       width={140}
                       height={30}
-                      className="header-logo hidden w-full dark:block"
+                      className="header-logo hidden w-1/2 dark:block"
                     />
                   </>
                 )}
@@ -108,39 +108,39 @@ const Header = () => {
                   onClick={navbarToggleHandler}
                   id="navbarToggler"
                   aria-label="Mobile Menu"
-                  className="absolute right-4 top-1/2 block -translate-y-1/2 rounded-lg px-3 py-[6px] ring-primary focus:ring-2 lg:hidden"
+                  className="absolute right-4 top-1/2 block -translate-y-1/2 rounded-lg px-3 py-[6px] ring-acid-100 focus:ring-2 lg:hidden"
                 >
                   <span
                     className={`relative my-1.5 block h-0.5 w-[30px] transition-all duration-300 ${
                       navbarOpen ? " top-[7px] rotate-45" : " "
-                    } ${pathUrl !== "/" && "!bg-dark dark:!bg-white"} ${
+                    } ${pathUrl !== "/" && "!bg-dark dark:!bg-whito-50"} ${
                       pathUrl === "/" && sticky
-                        ? "bg-dark dark:bg-white"
-                        : "bg-white"
+                        ? "bg-dark dark:bg-whito-50"
+                        : "bg-whito-50"
                     }`}
                   />
                   <span
                     className={`relative my-1.5 block h-0.5 w-[30px] transition-all duration-300 ${
                       navbarOpen ? "opacity-0 " : " "
-                    } ${pathUrl !== "/" && "!bg-dark dark:!bg-white"} ${
+                    } ${pathUrl !== "/" && "!bg-dark dark:!bg-whito-50"} ${
                       pathUrl === "/" && sticky
-                        ? "bg-dark dark:bg-white"
-                        : "bg-white"
+                        ? "bg-dark dark:bg-whito-50"
+                        : "bg-whito-50"
                     }`}
                   />
                   <span
                     className={`relative my-1.5 block h-0.5 w-[30px] transition-all duration-300 ${
                       navbarOpen ? " top-[-8px] -rotate-45" : " "
-                    } ${pathUrl !== "/" && "!bg-dark dark:!bg-white"} ${
+                    } ${pathUrl !== "/" && "!bg-dark dark:!bg-whito-50"} ${
                       pathUrl === "/" && sticky
-                        ? "bg-dark dark:bg-white"
-                        : "bg-white"
+                        ? "bg-dark dark:bg-whito-50"
+                        : "bg-whito-50"
                     }`}
                   />
                 </button>
                 <nav
                   id="navbarCollapse"
-                  className={`navbar absolute right-0 z-30 w-[250px] rounded border-[.5px] border-body-color/50 bg-white px-6 py-4 duration-300 dark:border-body-color/20 dark:bg-dark-2 lg:visible lg:static lg:w-auto lg:border-none lg:!bg-transparent lg:p-0 lg:opacity-100 lg:dark:bg-transparent ${
+                  className={`navbar absolute right-0 z-30 w-[250px] rounded border-[.5px] border-body-color/50 bg-whito-50 px-6 py-4 duration-300 dark:border-body-color/20 dark:bg-dark-2 lg:visible lg:static lg:w-auto lg:border-none lg:!bg-transparent lg:p-0 lg:opacity-100 lg:dark:bg-transparent ${
                     navbarOpen
                       ? "visibility top-full opacity-100"
                       : "invisible top-[120%] opacity-0"
@@ -154,7 +154,7 @@ const Header = () => {
                             <Link
                               scroll={false}
                               href={menuItem.path}
-                              className={`ud-menu-scroll flex py-2 text-base text-dark group-hover:text-primary dark:text-white dark:group-hover:text-primary lg:inline-flex lg:px-0 lg:py-6 ${
+                              className={`ud-menu-scroll flex py-2 text-base text-dark group-hover:text-primary dark:text-whito-50 dark:group-hover:text-primary lg:inline-flex lg:px-0 lg:py-6 ${
                                 pathUrl === menuItem?.path && "text-primary"
                               }`}
                             >
@@ -166,8 +166,8 @@ const Header = () => {
                               href={menuItem.path}
                               className={`ud-menu-scroll flex py-2 text-base lg:inline-flex lg:px-0 lg:py-6 ${
                                 sticky
-                                  ? "text-dark group-hover:text-primary dark:text-white dark:group-hover:text-primary"
-                                  : "text-body-color dark:text-white lg:text-white"
+                                  ? "text-dark group-hover:text-primary dark:text-whito-50 dark:group-hover:text-primary"
+                                  : "text-body-color dark:text-whito-50 lg:text-whito-50"
                               } ${
                                 pathUrl === menuItem?.path &&
                                 sticky &&
@@ -186,7 +186,7 @@ const Header = () => {
                           {pathUrl !== "/" ? (
                             <button
                               onClick={() => handleSubmenu(index)}
-                              className={`ud-menu-scroll flex items-center justify-between py-2 text-base text-dark group-hover:text-primary dark:text-white dark:group-hover:text-primary lg:inline-flex lg:px-0 lg:py-6`}
+                              className={`ud-menu-scroll flex items-center justify-between py-2 text-base text-dark group-hover:text-primary dark:text-whito-50 dark:group-hover:text-primary lg:inline-flex lg:px-0 lg:py-6`}
                             >
                               {menuItem.title}
 
@@ -211,8 +211,8 @@ const Header = () => {
                               onClick={() => handleSubmenu(index)}
                               className={`ud-menu-scroll flex items-center justify-between py-2 text-base lg:inline-flex lg:px-0 lg:py-6 ${
                                 sticky
-                                  ? "text-dark group-hover:text-primary dark:text-white dark:group-hover:text-primary"
-                                  : "text-white"
+                                  ? "text-dark group-hover:text-primary dark:text-whito-50 dark:group-hover:text-primary"
+                                  : "text-whito-50"
                               }`}
                             >
                               {menuItem.title}
@@ -236,7 +236,7 @@ const Header = () => {
                           )}
 
                           <div
-                            className={`submenu relative left-0 top-full w-[250px] rounded-sm bg-white p-4 transition-[top] duration-300 group-hover:opacity-100 dark:bg-dark-2 lg:invisible lg:absolute lg:top-[110%] lg:block lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full ${
+                            className={`submenu relative left-0 top-full w-[250px] rounded-sm bg-whito-50 p-4 transition-[top] duration-300 group-hover:opacity-100 dark:bg-dark-2 lg:invisible lg:absolute lg:top-[110%] lg:block lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full ${
                               openIndex === index ? "!-left-[25px]" : "hidden"
                             }`}
                           >
@@ -265,7 +265,7 @@ const Header = () => {
                 <button
                   aria-label="theme toggler"
                   onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                  className="flex h-8 w-8 items-center justify-center text-body-color duration-300 dark:text-white"
+                  className="flex h-8 w-8 items-center justify-center text-body-color duration-300 dark:text-whito-50"
                 >
                   <span>
                     <svg
@@ -278,7 +278,7 @@ const Header = () => {
                     <svg
                       viewBox="0 0 23 23"
                       className={`h-[30px] w-[30px] fill-current text-dark dark:hidden ${
-                        !sticky && pathUrl === "/" && "text-white"
+                        !sticky && pathUrl === "/" && "text-whito-50"
                       }`}
                     >
                       <g clipPath="url(#clip0_40_125)">
@@ -288,73 +288,7 @@ const Header = () => {
                   </span>
                 </button>
 
-                {/* {session?.user ? (
-                  <>
-                    <p
-                      className={`loginBtn px-7 py-3 text-base font-medium ${
-                        !sticky && pathUrl === "/" ? "text-white" : "text-dark"
-                      }`}
-                    >
-                      {session?.user?.name}
-                    </p>
-                    {pathUrl !== "/" || sticky ? (
-                      <button
-                        onClick={() => signOut()}
-                        className="signUpBtn rounded-lg bg-primary bg-opacity-100 px-6 py-3 text-base font-medium text-white duration-300 ease-in-out hover:bg-opacity-20 hover:text-dark"
-                      >
-                        Sign Out
-                      </button>
-                    ) : (
-                      <button
-                        onClick={() => signOut()}
-                        className="signUpBtn rounded-lg bg-white bg-opacity-20 px-6 py-3 text-base font-medium text-white duration-300 ease-in-out hover:bg-opacity-100 hover:text-dark"
-                      >
-                        Sign Out
-                      </button>
-                    )
-                    }
-                  </>
-                ) : (
-                  <>
-                    {pathUrl !== "/" ? (
-                      <>
-                        <Link
-                          href="/auth/signin"
-                          className="px-7 py-3 text-base font-medium text-dark hover:opacity-70 dark:text-white"
-                        >
-                          Sign In
-                        </Link>
-                        <Link
-                          href="/auth/signup"
-                          className="rounded-lg bg-primary px-6 py-3 text-base font-medium text-white duration-300 ease-in-out hover:bg-primary/90 dark:bg-white/10 dark:hover:bg-white/20"
-                        >
-                          Sign Up
-                        </Link>
-                      </>
-                    ) : (
-                      <>
-                        <Link
-                          href="/auth/signin"
-                          className={`px-7 py-3 text-base font-medium hover:opacity-70 ${
-                            sticky ? "text-dark dark:text-white" : "text-white"
-                          }`}
-                        >
-                          Sign In
-                        </Link>
-                        <Link
-                          href="/auth/signup"
-                          className={`rounded-lg px-6 py-3 text-base font-medium text-white duration-300 ease-in-out ${
-                            sticky
-                              ? "bg-primary hover:bg-primary/90 dark:bg-white/10 dark:hover:bg-white/20"
-                              : "bg-white/10 hover:bg-white/20"
-                          }`}
-                        >
-                          Sign Up
-                        </Link>
-                      </>
-                    )}
-                  </>
-                )} */}
+                
               </div>
             </div>
           </div>

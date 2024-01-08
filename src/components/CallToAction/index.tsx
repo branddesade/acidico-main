@@ -2,21 +2,22 @@ import Link from "next/link";
 
 const CallToAction = () => {
   return (
-    <section className="bg-primary relative z-10 overflow-hidden py-20 lg:py-[115px]">
+    <section className="bg-acid-50 relative z-10 overflow-hidden py-20 lg:py-[115px]">
       <div className="container mx-auto">
         <div className="relative overflow-hidden">
           <div className="-mx-4 flex flex-wrap items-stretch">
             <div className="w-full px-4">
               <div className="mx-auto max-w-[570px] text-center">
                 <h2 className="mb-2.5 text-3xl font-bold text-white md:text-[38px] md:leading-[1.44]">
-                  <span>ACID DAO</span><br></br>
+                  <span>Tokenomics<br></br></span>
                   <span className="text-3xl font-normal md:text-[40px]">
                     {" "}
-                    Join Our Community{" "}
+                    Get Started Now{" "}
                   </span>
                 </h2>
                 <p className="mx-auto mb-6 max-w-[515px] text-base leading-[1.5] text-white">
-                Stay up-to-date with our latest developments!
+                  There are many variations of passages of Lorem Ipsum but the
+                  majority have suffered in some form.
                 </p>
                 <Link
                   href="/"
