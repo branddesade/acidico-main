@@ -18,7 +18,20 @@ const Pricing = () => {
           <SectionTitle
             subtitle="$ACID"
             title="Tokenomics"
-            paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+            paragraph="Total Supply:
+            1,000,000,000 $SILLY
+            
+            Max Supply:
+            1,000,000,000 $SILLY
+            
+            Circulating Supply:
+            ‍999,975,729 $SILLY
+            
+            Distribution: All tokens (100%) added to the Liquidity Pool (LP).
+            
+            LP Tokens: Burned to ensure fairness and security.
+            
+            Ownership: Fully community-owned; project is decentralized with no central authority."
             center
           />
           <div className="w-full ">
@@ -26,8 +39,8 @@ const Pricing = () => {
                     className={`relative mb-4 sm:mb-8 sm:h-[400px] md:h-[540px] lg:h-[400px] xl:h-[500px] `}
                   >
                     <Image
-                      src="/images/about/about-image-01.jpg"
-                      alt="about image"
+                      src="/images/about/tokenomics-01.jpg"
+                      alt="tokenomics"
                       fill
                       className="h-full w-full object-fit object-center"
                     />

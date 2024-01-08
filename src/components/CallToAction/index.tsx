@@ -12,12 +12,11 @@ const CallToAction = () => {
                   <span>ACID DAO</span><br></br>
                   <span className="text-3xl font-normal md:text-[40px]">
                     {" "}
-                    Get Started Now{" "}
+                    Join Our Community{" "}
                   </span>
                 </h2>
                 <p className="mx-auto mb-6 max-w-[515px] text-base leading-[1.5] text-white">
-                  There are many variations of passages of Lorem Ipsum but the
-                  majority have suffered in some form.
+                Stay up-to-date with our latest developments!
                 </p>
                 <Link
                   href="/"
