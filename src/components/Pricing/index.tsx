@@ -7,16 +7,16 @@ import SectionTitle from "../Common/SectionTitle";
 import PricingBox from "./PricingBox";
 
 const Pricing = () => {
-  const [products, setProducts] = useState([]);
+  // const [products, setProducts] = useState([]);
 
-  useEffect(() => {
-    fetchProducts();
-  }, []);
+  // useEffect(() => {
+  //   fetchProducts();
+  // }, []);
 
-  const fetchProducts = async () => {
-    const { data } = await axios.get("/api/getproducts");
-    setProducts(data);
-  };
+  // const fetchProducts = async () => {
+  //   const { data } = await axios.get("/api/getproducts");
+  //   setProducts(data);
+  // };
 
   return (
     <section
@@ -46,10 +46,10 @@ const Pricing = () => {
                 </div>
         </div>
 
-        <div className="-mx-4 flex flex-wrap justify-center">
+        {/* <div className="-mx-4 flex flex-wrap justify-center">
           {products.map((product, i) => (
             <PricingBox key={1} product={product} />
-          ))}
+          ))} */}
           {/*           
           <PricingBox
             popular={false}
